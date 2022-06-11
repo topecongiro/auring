@@ -1,0 +1,25 @@
+[package]
+name = "auring"
+version = "0.1.0"
+edition = "2021"
+authors = ["Seiichi Uchida <topecongiro@fastmail.com>"]
+description = "async liburing"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/topecongiro/auring"
+homepage = "https://github.com/topecongiro/auring"
+keywords = ["linux", "iouring"]
+categories = ["asynchronous", "concurrency", "os", "filesystem"]
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2.126"
+flume = "0.10.12"
+uring-sys2 = { git = "https://github.com/topecongiro/uring-sys" }
+thiserror = "1.0.31"
+
+[dev-dependencies]
+anyhow = "1.0.57"
+tempfile = "3.3.0"
+tokio = { version = "1.19.1", features = ["full"] }
